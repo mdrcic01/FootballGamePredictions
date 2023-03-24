@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Team {
-    private String name;
-    private String formation;
+    private final String name;
+    private final String formation;
     private List<Player> players;
-    private Integer defenderNumber;
-    private Integer midfielderNumber;
-    private Integer attackerNumber;
+    private final Integer defenderNumber;
+    private final Integer midfielderNumber;
+    private final Integer attackerNumber;
     private Double attackScore;
     private Double defenceScore;
 
@@ -32,28 +32,12 @@ public class Team {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getFormation() {
-        return formation;
-    }
-
-    public void setFormation(String formation) {
-        this.formation = formation;
-    }
-
     public List<Player> getPlayers() {
         return players;
     }
 
     public void setPlayers(List<Player> players) {
         this.players = players;
-    }
-
-    public Integer getDefenderNumber() {
-        return defenderNumber;
     }
 
     public Integer getMidfielderNumber() {
@@ -68,16 +52,8 @@ public class Team {
         return attackScore;
     }
 
-    public void setAttackScore(Double attackScore) {
-        this.attackScore = attackScore;
-    }
-
     public Double getDefenceScore() {
         return defenceScore;
-    }
-
-    public void setDefenceScore(Double defenceScore) {
-        this.defenceScore = defenceScore;
     }
 
     @Override

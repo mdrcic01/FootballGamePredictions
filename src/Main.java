@@ -7,7 +7,6 @@ import model.Match;
 import model.Player;
 import model.Team;
 
-import java.io.FilterOutputStream;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
@@ -16,6 +15,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
+    private static final Integer PLAYER_NO = 11;
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
@@ -87,7 +88,7 @@ public class Main {
 
     private static List<Player> insertPlayers(Scanner userInput) {
         List<Player> players = new ArrayList<>();
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < PLAYER_NO; i++) {
             players.add(inputPlayer(userInput, i));
         }
 

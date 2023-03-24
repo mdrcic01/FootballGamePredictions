@@ -7,15 +7,15 @@ import enumerations.Specialization;
 
 public class Player {
 
-    private String name;
-    private Double attack;
-    private Double defence;
-    private Morale morale;
-    private Double trainingAttendance;
-    private Performance trainingPerformance;
-    private Specialization specialization;
-    private Double attackContribution;
-    private Double defenceContribution;
+    private final String name;
+    private final Double attack;
+    private final Double defence;
+    private final Morale morale;
+    private final Double trainingAttendance;
+    private final Performance trainingPerformance;
+    private final Specialization specialization;
+    private final Double attackContribution;
+    private final Double defenceContribution;
     private Position position;
 
     public Player(String name,
@@ -41,72 +41,16 @@ public class Player {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Double getAttack() {
-        return attack;
-    }
-
     public Double getAttackContribution() {
         return attackContribution;
-    }
-
-    public void setAttackContribution(Double attackContribution) {
-        this.attackContribution = attackContribution;
     }
 
     public Double getDefenceContribution() {
         return defenceContribution;
     }
 
-    public void setDefenceContribution(Double defenceContribution) {
-        this.defenceContribution = defenceContribution;
-    }
-
-    public void setAttack(Double attack) {
-        this.attack = attack;
-    }
-
-    public Double getDefence() {
-        return defence;
-    }
-
-    public void setDefence(Double defence) {
-        this.defence = defence;
-    }
-
-    public Morale getMorale() {
-        return morale;
-    }
-
-    public void setMorale(Morale morale) {
-        this.morale = morale;
-    }
-
-    public Double getTrainingAttendance() {
-        return trainingAttendance;
-    }
-
-    public void setTrainingAttendance(Double trainingAttendance) {
-        this.trainingAttendance = trainingAttendance;
-    }
-
-    public Performance getTrainingPerformance() {
-        return trainingPerformance;
-    }
-
-    public void setTrainingPerformance(Performance trainingPerformance) {
-        this.trainingPerformance = trainingPerformance;
-    }
-
     public Specialization getSpecialization() {
         return specialization;
-    }
-
-    public void setSpecialization(Specialization specialization) {
-        this.specialization = specialization;
     }
 
     public Position getPosition() {
