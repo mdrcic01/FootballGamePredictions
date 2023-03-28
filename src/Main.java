@@ -44,11 +44,13 @@ public class Main {
         BigDecimal scoreUnparsedTeam1 = BigDecimal.valueOf(team1.getAttackScore() - team2.getDefenceScore());
         BigDecimal scoreUnparsedTeam2 = BigDecimal.valueOf(team2.getAttackScore() - team1.getDefenceScore());
 
+        System.out.println(scoreUnparsedTeam1 + " - " + scoreUnparsedTeam2);
+
         BigInteger score1 = (scoreUnparsedTeam1.setScale(0, RoundingMode.HALF_DOWN).compareTo(BigDecimal.ZERO) >= 0)
-                ? scoreUnparsedTeam1.setScale(1, RoundingMode.HALF_DOWN).toBigInteger()
+                ? scoreUnparsedTeam1.setScale(0, RoundingMode.HALF_DOWN).toBigInteger()
                 : BigInteger.ZERO;
         BigInteger score2 = (scoreUnparsedTeam2.setScale(0, RoundingMode.HALF_DOWN).compareTo(BigDecimal.ZERO) >= 0)
-                ? scoreUnparsedTeam2.setScale(1, RoundingMode.HALF_DOWN).toBigInteger()
+                ? scoreUnparsedTeam2.setScale(0, RoundingMode.HALF_DOWN).toBigInteger()
                 : BigInteger.ZERO;
 
         return new Match(team1,

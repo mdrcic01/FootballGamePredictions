@@ -69,9 +69,9 @@ public class Team {
         for (Player player : this.players) {
 
             switch(player.getPosition()) {
-                case GOALKEEPER -> this.defenceScore += 1.2*player.getDefenceContribution();
+                case GOALKEEPER -> this.defenceScore += 0.9*player.getDefenceContribution();
                 case DEFENDER -> {
-                    this.defenceScore += 0.9*player.getDefenceContribution();
+                    this.defenceScore += 0.7*player.getDefenceContribution();
                     this.attackScore += 0.2* player.getAttackContribution();
                 }
                 case MIDFIELDER -> {
@@ -80,7 +80,7 @@ public class Team {
                 }
                 case ATTACKER -> {
                     this.defenceScore += 0.2*player.getDefenceContribution();
-                    this.attackScore += 0.9* player.getAttackContribution();
+                    this.attackScore += 1.0 * player.getAttackContribution();
                 }
             }
         }
